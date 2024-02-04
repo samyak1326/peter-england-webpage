@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Confession Box</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Font Awesome CDN for icons if you're using it -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var faqQuestions = document.querySelectorAll('.faq-question');
+        
+            faqQuestions.forEach(function(question) {
+                question.addEventListener('click', function() {
+                    this.parentElement.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+        
+        <header class="site-header">
+            <div class="header-top">
+                <!-- Logo -->
+                <img src="pe_logo.png" alt="Peter England Logo" class="logo">
+                <!-- Navigation Links -->
+                <nav class="navigation">
+                    <a href="#" class="home-icon"><i class="fas fa-home"></i>SHOP</a>
+                    <input type="text" placeholder="Search">
+                </nav>
+                <!-- Utility Links -->
+                <div class="utility-links">
+                    <a href="#" class="utility-link">Customer Care</a>
+                    <a href="#" class="utility-link">Return Policy</a>
+                    <a href="#" class="utility-link">Store Locator</a>
+                    <a href="#" class="utility-link">Track Order</a>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <!-- Store Selector and Cart -->
+                <div class="store-cart">
+                    <div class="store-selector">Store: Vikas Nagar</div>
+                    <div class="saved-products">Saved products</div>
+                    <div class="cart">My Cart 0</div>
+                </div>
+                <!-- Login/Register -->
+                <div class="login-register">
+                    <a href="#">Login/Register</a>
+                </div>
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </header>
+        
+
+    <div class="confession-box">
+        <h2>Confess Anonymously</h2>
+        <textarea placeholder="Your confession..."></textarea>
+        <button>Submit</button>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-header">
+        <h2>Frequently Asked Questions</h2>
+    </div>
+    
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">How do I know my order is confirmed?</div>
+            <div class="faq-answer">Once your payment is authorized and your order is completed, you will receive an email and sms confirming the order placement...</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I know my order is confirmed?</div>
+            <div class="faq-answer">Once your payment is authorized and your order is completed, you will receive an email and sms confirming the order placement...</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I know my order is confirmed?</div>
+            <div class="faq-answer">Once your payment is authorized and your order is completed, you will receive an email and sms confirming the order placement...</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I know my order is confirmed?</div>
+            <div class="faq-answer">Once your payment is authorized and your order is completed, you will receive an email and sms confirming the order placement...</div>
+        </div>
+        <!-- Repeat for other FAQ items -->
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>NEED HELP?</h5>
+                <ul>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <!-- ... other links ... -->
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>ABOUT US</h5>
+                <ul>
+                    <!-- ... links ... -->
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>JOIN THE PETER ENGLAND COMMUNITY</h5>
+                <form>
+                    <input type="email" placeholder="Enter your e-mail / mobile number">
+                    <button type="submit">→</button>
+                </form>
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="your-facebook-url"><i class="fab fa-facebook-f"></i></a>
+                    <a href="your-twitter-url"><i class="fab fa-twitter"></i></a>
+                    <a href="your-instagram-url"><i class="fab fa-instagram"></i></a>
+                    <!-- ... other icons ... -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+

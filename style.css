@@ -1,0 +1,307 @@
+/* General Reset */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+font-family: 'Arial', sans-serif;
+background-color: #f4f4f4;
+color: #333;
+}
+
+a {
+color: #005eb8;
+text-decoration: none;
+}
+
+a:hover {
+color: #00376b;
+}
+
+/* Header Styles */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* Adjust the background color as needed */
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc; /* Adjust the color as needed */
+}
+
+.header-top {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 20px;
+}
+
+.logo {
+max-width: 100px;
+height: auto;
+}
+
+.header-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+}
+.navigation input[type="text"] {
+    margin-left: 10px;
+    /* Apply input field styles */
+}
+
+.utility-links {
+    display: flex;
+    align-items: center;
+    /* Style each link with appropriate margins and colors */
+}
+
+.utility-link {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333; /* Adjust text color as needed */
+    /* Add additional styles */
+}
+
+.store-cart, .login-register {
+    display: flex;
+    align-items: center;
+}
+
+.store-selector, .saved-products, .cart {
+    margin-right: 10px;
+    /* Style as needed */
+}
+
+.social-icons a {
+    margin: 0 5px;
+    color: #333; /* Adjust the color to match the icons */
+    /* Add additional styles */
+}
+
+/* Confession Box Styles */
+.confession-box {
+background-color: white;
+margin: 20px auto;
+padding: 20px;
+width: 80%;
+max-width: 600px;
+border: 1px solid #ddd;
+border-radius: 5px;
+}
+
+.confession-box textarea {
+width: 100%;
+height: 100px;
+margin-top: 10px;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 5px;
+resize: vertical;
+}
+
+.confession-box button {
+background-color: #005eb8;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+/* FAQ Styles */
+.faqs {
+margin: 20px auto;
+width: 80%;
+max-width: 600px;
+}
+
+.faq {
+background-color: white;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #ddd;
+border-radius: 5px;
+}
+
+.faq summary {
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+.faq p {
+padding-left: 20px;
+}
+.faq-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-header h2 {
+    display: inline-block;
+    font-size: 24px; /* Adjust the size as needed */
+    position: relative;
+    margin-bottom: 20px; /* Space between the title and the underline */
+}
+
+.faq-header h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background: #000; /* Color of the underline */
+    position: absolute;
+    left: 0;
+    bottom: -10px; /* Adjust the position as needed */
+}
+
+
+/* Footer Styles */
+.site-footer {
+background-color: #333;
+color: white;
+padding: 20px 0;
+font-size: 0.9em;
+position: relative;
+bottom: 0;
+width: 100%;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-between;
+max-width: 1200px;
+margin: auto;
+flex-wrap: wrap;
+}
+
+.footer-section h5 {
+color: #fff;
+margin-bottom: 15px;
+}
+
+.footer-section ul {
+list-style: none;
+}
+
+.footer-section ul li a {
+color: #ccc;
+transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+color: #fff;
+}
+
+.footer-section form {
+display: flex;
+margin-top: 10px;
+}
+
+.footer-section input[type="email"] {
+padding: 5px;
+margin-right: 5px;
+border: none;
+border-radius: 5px;
+}
+
+.footer-section button {
+background-color: #007bff;
+color: white;
+cursor: pointer;
+border: none;
+border-radius: 5px;
+padding: 5px 10px;
+}
+
+.social-icons {
+margin-top: 10px;
+}
+
+.social-icons a {
+color: #ccc;
+margin-right: 10px;
+}
+
+.social-icons a:hover {
+color: #fff;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .header-top,
+    .header-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+/* Ensuring the footer is at the bottom */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+display: flex;
+flex-direction: column;
+}
+
+.content {
+    min-height: 100%;
+    flex: 1 0 auto;
+}
+
+.site-footer {
+flex-shrink: 0;
+}
+.faq-container {
+    margin: 40px auto;
+    max-width: 700px; /* Adjust as needed */
+}
+
+.faq-item {
+    background-color: #fff; /* Change if your FAQ background is different */
+    margin-bottom: 10px; /* Space between FAQ items */
+}
+
+.faq-question {
+    padding: 15px; /* Adjust padding as needed */
+    font-size: 18px; /* Adjust font-size as needed */
+    font-weight: bold; /* Makes the question bold */
+    color: #333; /* Adjust to the color of your text */
+    border: 1px solid #ccc; /* Border color around the question */
+    cursor: pointer; /* Changes cursor to indicate it's clickable */
+}
+
+.faq-answer {
+    display: none; /* Hide answers initially */
+    padding: 15px; /* Adjust padding as needed */
+    border-left: 1px solid #ccc; /* Border color for left side */
+    border-right: 1px solid #ccc; /* Border color for right side */
+    border-bottom: 1px solid #ccc; /* Border color for bottom */
+}
+
+/* Toggling FAQ answer */
+.faq-item.active .faq-answer {
+    display: block; /* Show answer when active */
+}
+
+
