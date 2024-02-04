@@ -30,6 +30,30 @@
                 });
             });
         });
+
+        document.addEventListener('DOMContentLoaded', function() 
+        {
+            var articleHeadings = document.querySelectorAll('.blog-article-heading');
+
+            // Loop through each heading
+            articleHeadings.forEach(function(heading) {
+                // Add a click event listener to each heading
+                heading.addEventListener('click', function() {
+                    // Get the content that is next to the heading (sibling)
+                    var content = this.nextElementSibling;
+
+                    // Check if the content is already displayed
+                    if (content.style.display === 'block') {
+                        // If it is, hide it
+                        content.style.display = 'none';
+                    } else {
+                        // If it's hidden, display it
+                        content.style.display = 'block';
+                    }
+                });
+            });
+        });
+
     </script>
 
         <div class="top-color-bar"></div>
@@ -44,12 +68,16 @@
                         <input type="search" placeholder="Search">
                     </div>
                 </div>
+
+                <div class="header-center">
+                    <img src="pe-logo-final.png" alt="Hygiene for Him" class="logo">
+                </div>
         
                 <!-- Right Section: Utility Links, Store Selector, Cart, Login/Register, and Social Media Icons -->
                 <div class="header-right">
                     <!-- Utility Links Row -->
                     <div class="utility-links-row">
-                        <a href="#" class="utility-link">Blogs</a>
+                        <a href="blog.html" class="utility-link">Blogs</a>
                         <!-- <a href="#" class="utility-link">Customer Care</a> -->
                         <a href="#" class="utility-link">Return Policy</a>
                         <a href="#" class="utility-link">Store Locator</a>
@@ -72,17 +100,19 @@
         </header>
          
 
-        <div class="confession-form-container">
-            <h2>Confess Anonymously</h2>
-            <form action="#" method="post"> <!-- Replace with your form action and method -->
-                <div class="confession-input-group">
-                    <input type="text" id="confession-name" name="name" placeholder="Name (optional)">
-                </div>
-                <div class="confession-input-group">
-                    <textarea id="confession-message" name="message" placeholder="Your confession..." required></textarea>
-                </div>
-                <button type="submit" class="confession-send-button">Send</button>
-            </form>
+        <div class="confession-background">
+            <div class="confession-form-container">
+                <h2>Confess Anonymously</h2>
+                <form action="#" method="post">
+                    <div class="confession-input-group">
+                        <input type="text" id="confession-name" name="name" placeholder="Name (optional)">
+                    </div>
+                    <div class="confession-input-group">
+                        <textarea id="confession-message" name="message" placeholder="Your confession..." required></textarea>
+                    </div>
+                    <button type="submit" class="confession-send-button">Send</button>
+                </form>
+            </div>
         </div>
         
 

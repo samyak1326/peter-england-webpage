@@ -15,8 +15,10 @@ body {
     flex-direction: column;
 }
 html, body {
-    height: 100%;
-    margin: 0;
+    height: 100%; /* Full height for the root elements */
+    margin: 0; /* Reset default margin */
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -60,6 +62,14 @@ a:hover {
 .header-left {
     display: flex;
     align-items: center;
+}
+
+.header-center {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
 }
 
 .logo {
@@ -146,13 +156,26 @@ a:hover {
 }
 
 /* Confession Box Styles */
+.confession-background {
+    background-image: url('pan-image.jpg'); /* Update with the correct path */
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0; /* Adjust the padding to create some space above and below the form */
+}
+
 .confession-form-container {
     background: #fff; /* or any other light color as per your design */
     border-radius: 8px;
     padding: 40px; /* Adjust padding as needed */
     max-width: 500px; /* Adjust width as needed */
-    margin: 40px auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adjust box-shadow as needed */
+    width: 100%; /* Ensures the form container doesn't exceed the max-width */
+    margin: 0 auto; /* Centers the form in the page */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .confession-form-container h2 {
@@ -202,6 +225,7 @@ a:hover {
 /* FAQ Styles */
 /* FAQ Header Styles */
 .faq-header {
+    margin-top: 50px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -211,6 +235,11 @@ a:hover {
     font-size: 24px; /* Adjust the size as needed */
     position: relative;
     margin-bottom: 20px; /* Space between the title and the underline */
+    background-color: #005336; /* Green background color */
+    padding: 10px 20px; /* Add padding to reveal the background */
+    color: #ffffff; /* Optional: change text color if needed */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: if you want rounded corners */
 }
 
 .faq-header h2::after {
@@ -220,11 +249,11 @@ a:hover {
     height: 2px; /* Thickness of the underline */
     background: #000; /* Color of the underline */
     position: absolute;
-    left: 0;
+    left: 50%; /* Center the line */
     bottom: -10px; /* Adjust the position as needed */
+    transform: translateX(-50%); /* Center the line */
 }
 
-/* FAQ Section Styles */
 .faq-section {
     max-width: 800px; /* Adjust as needed */
     margin: auto;
@@ -276,6 +305,91 @@ a:hover {
     color: #677284;
     margin: 0;
     padding: 10px 0; /* Reduced padding */
+}
+
+/* Blog Section */
+.blog-header {
+    background-image: url('bg-image.jpg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center top ;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 200px; /* Adjust the padding to push the content down */
+    padding-bottom: 200px; /* Space below the h1 text */
+    text-align: center;
+    position: relative;  /* Add padding above and below the h1 for visual space */
+    color: #08233D; /* Change the text color if needed to contrast with the background image */
+}
+
+.blog-header h1 {
+    position: absolute; /* Position absolutely */
+    bottom: 0; /* Stick to the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontal centering */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    padding: 10px 20px;
+    margin-top: 20px; /* This pushes h1 down from the top of the blog-header */
+    margin-bottom: 20px;
+    border-radius: 5px; /* Optional: Adds a subtle shadow for depth */
+}
+
+.blog-article-heading {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    background-color: #005336; /* Or any green color you prefer */
+    color: white; /* Text color */
+    padding: 10px;
+    margin: 10px 0; /* Adjust as needed */
+    cursor: pointer; /* Indicates that you can click the heading */
+    user-select: none; /* Prevents text selection */
+}
+
+.blog-article-content {
+    display: none; /* Hide content initially */
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional */
+    margin: 10px 0; /* Spacing for the content */
+}
+
+
+.blog-content {
+    font-family: 'Roboto', sans-serif;
+    display: flex; /* Use flexbox to lay out children side by side */
+    justify-content: space-between; /* Add space between the articles */
+    align-items: flex-start; /* Align articles to the start of the container */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line at a certain point */
+    gap: 20px; /* Add gap between articles for better readability */
+    padding: 20px; /* Padding around the content */
+}
+
+.blog-article {
+    flex: 1; /* Allow each article to grow and fill the space */
+    max-width: 50%; /* Maximum width of each article */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better appearance */
+    padding: 20px; /* Padding inside each article */
+    background-color: white; /* Background color for the article */
+    margin-bottom: 20px; /* Space between rows when they wrap */
+}
+.blog-article p {
+    font-family: 'Lato', sans-serif;
+}
+
+.blog-article h2 {
+    margin-top: 0;
+}
+
+.show-content {
+    display: block;
+}
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Ensure the articles stack on top of each other on smaller screens */
+@media screen and (max-width: 768px) {
+    .blog-article {
+        max-width: 100%; /* Each article takes full width on small screens */
+    }
 }
 
 
@@ -371,8 +485,8 @@ color: #fff;
 /* Ensuring the footer is at the bottom */
 
 .content {
-    min-height: 100%;
-    flex: 1 0 auto;
+    /* min-height: 100%; */
+    flex: 1 ;
 }
 
 .site-footer {
