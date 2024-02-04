@@ -1,91 +1,124 @@
-/* General Reset */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* General Styles */
 body {
-font-family: 'Arial', sans-serif;
-background-color: #f4f4f4;
-color: #333;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 a {
-color: #005eb8;
-text-decoration: none;
+    color: #005eb8;
+    text-decoration: none;
 }
 
 a:hover {
-color: #00376b;
+    color: #00376b;
 }
 
 /* Header Styles */
 .site-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff; /* Adjust the background color as needed */
-    padding: 10px 20px;
-    border-bottom: 1px solid #ccc; /* Adjust the color as needed */
+    padding: 0 20px;
 }
 
-.header-top {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 0 20px;
+.header-left {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
-max-width: 100px;
-height: auto;
-}
-
-.header-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 10px;
+    max-width: 100px;
+    height: auto;
 }
 
 .navigation {
     display: flex;
     align-items: center;
 }
+
 .navigation input[type="text"] {
     margin-left: 10px;
-    /* Apply input field styles */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.utility-links {
+.header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.utility-links-row {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
+
+.store-cart-login-row {
     display: flex;
     align-items: center;
-    /* Style each link with appropriate margins and colors */
 }
 
 .utility-link {
-    margin-left: 10px;
-    text-decoration: none;
-    color: #333; /* Adjust text color as needed */
-    /* Add additional styles */
-}
-
-.store-cart, .login-register {
-    display: flex;
-    align-items: center;
-}
-
-.store-selector, .saved-products, .cart {
     margin-right: 10px;
-    /* Style as needed */
+    color: #333;
+    font-size: 14px;
+}
+
+.store-selector,
+.saved-products,
+.cart,
+.login-register {
+    margin-right: 10px;
+    color: #333;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    margin-left: 10px;
 }
 
 .social-icons a {
     margin: 0 5px;
-    color: #333; /* Adjust the color to match the icons */
-    /* Add additional styles */
+    color: #333;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .header-top,
+    .header-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .utility-links-row,
+    .store-cart-login-row {
+        justify-content: center;
+    }
+
+    .navigation,
+    .utility-links-row,
+    .store-cart-login-row {
+        flex-wrap: wrap;
+    }
+
+    .navigation input[type="text"] {
+        margin-top: 10px;
+    }
 }
 
 /* Confession Box Styles */
