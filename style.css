@@ -9,7 +9,7 @@ body {
     font-family: Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    padding-top: 70px;
+    padding-top: 73px;
 }
 
 a {
@@ -20,13 +20,23 @@ a {
 a:hover {
     color: #00376b;
 }
+.top-color-bar {
+    height: 3px; /* Height of the color bar */
+    background: linear-gradient(to right, #C8252C, #08233D, #C8252C); /* Gradient colors */
+    width: 100%; /* Full width */
+    position: fixed; /* Fixed at the top */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    z-index: 1001; /* Above the site-header */
+}
+
 
 /* Header Styles */
 .site-header {
     background-color: #fff;
     border-bottom: 1px solid #ccc;
     position: fixed; /* Fix the header at the top of the page */
-    top: 0; /* Align the header to the top */
+    top: 2px; /* Align the header to the top */
     left: 0; /* Align the header to the left */
     width: 100%; /* Ensure the header stretches across the full width of the page */
     z-index: 1000; /* Ensure the header stays above other content */
