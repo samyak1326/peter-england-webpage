@@ -122,34 +122,58 @@ a:hover {
 }
 
 /* Confession Box Styles */
-.confession-box {
-background-color: white;
-margin: 20px auto;
-padding: 20px;
-width: 80%;
-max-width: 600px;
-border: 1px solid #ddd;
-border-radius: 5px;
+.confession-form-container {
+    background: #fff; /* or any other light color as per your design */
+    border-radius: 8px;
+    padding: 40px; /* Adjust padding as needed */
+    max-width: 500px; /* Adjust width as needed */
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adjust box-shadow as needed */
 }
 
-.confession-box textarea {
-width: 100%;
-height: 100px;
-margin-top: 10px;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 5px;
-resize: vertical;
+.confession-form-container h2 {
+    color: #333; /* Adjust title color as needed */
+    font-size: 24px; /* Adjust font-size as needed */
+    margin-bottom: 20px;
 }
 
-.confession-box button {
-background-color: #005eb8;
-color: white;
-padding: 10px 20px;
-border: none;
-border-radius: 5px;
-cursor: pointer;
+.confession-form-container .confession-input-group {
+    margin-bottom: 20px;
 }
+
+.confession-form-container input[type="text"],
+.confession-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc; /* Adjust border color as needed */
+    resize: none;
+}
+
+.confession-form-container .confession-send-button {
+    background-color: #ff0000; /* Red color for the button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px; /* Adjust font-size as needed */
+    display: block; /* Make the button a block element to fit the width */
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: if you want a shadow for the button */
+}
+
+.confession-form-container .confession-send-button:hover {
+    background-color: #e60000; /* Slightly darker red color on hover */
+}
+
+/* Handle focus styles for inputs */
+.confession-form-container input[type="text"]:focus,
+.confession-form-container textarea:focus {
+    outline: none;
+    border-color: #005eb8; /* Highlight color when an input is focused */
+}
+
 
 /* FAQ Styles */
 .faqs {
