@@ -75,6 +75,7 @@ a:hover {
 .logo {
     max-width: 100px;
     height: auto;
+    margin-right: 20px;
 }
 
 .navigation {
@@ -87,6 +88,10 @@ a:hover {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+.nav-link {
+    /* Other styles... */
+    padding-left: 20px; /* Adds space to the left of the SHOP text */
 }
 
 .header-right {
