@@ -176,28 +176,7 @@ a:hover {
 
 
 /* FAQ Styles */
-.faqs {
-margin: 20px auto;
-width: 80%;
-max-width: 600px;
-}
-
-.faq {
-background-color: white;
-padding: 10px;
-margin-bottom: 10px;
-border: 1px solid #ddd;
-border-radius: 5px;
-}
-
-.faq summary {
-font-weight: bold;
-margin-bottom: 5px;
-}
-
-.faq p {
-padding-left: 20px;
-}
+/* FAQ Header Styles */
 .faq-header {
     text-align: center;
     margin-bottom: 20px;
@@ -220,6 +199,59 @@ padding-left: 20px;
     left: 0;
     bottom: -10px; /* Adjust the position as needed */
 }
+
+/* FAQ Section Styles */
+.faq-section {
+    max-width: 800px; /* Adjust as needed */
+    margin: auto;
+}
+
+.faq-item {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Spacing between items */
+    overflow: hidden; /* Ensures the border radius clips the content */
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 20px; /* Adjust as needed */
+    width: 100%;
+    font-size: 18px; /* Adjust as needed */
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 24px;
+}
+
+.faq-question.active::after {
+    content: '-';
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: #fff; /* White background for the answer */
+    padding: 0 20px; /* Vertical padding removed */
+}
+
+/* Reduced vertical padding for the paragraph inside the answer */
+.faq-answer p {
+    margin: 0;
+    padding: 10px 0; /* Reduced padding */
+}
+
 
 
 /* Footer Styles */
@@ -328,37 +360,6 @@ flex-direction: column;
 
 .site-footer {
 flex-shrink: 0;
-}
-.faq-container {
-    margin: 40px auto;
-    max-width: 700px; /* Adjust as needed */
-}
-
-.faq-item {
-    background-color: #fff; /* Change if your FAQ background is different */
-    margin-bottom: 10px; /* Space between FAQ items */
-}
-
-.faq-question {
-    padding: 15px; /* Adjust padding as needed */
-    font-size: 18px; /* Adjust font-size as needed */
-    font-weight: bold; /* Makes the question bold */
-    color: #333; /* Adjust to the color of your text */
-    border: 1px solid #ccc; /* Border color around the question */
-    cursor: pointer; /* Changes cursor to indicate it's clickable */
-}
-
-.faq-answer {
-    display: none; /* Hide answers initially */
-    padding: 15px; /* Adjust padding as needed */
-    border-left: 1px solid #ccc; /* Border color for left side */
-    border-right: 1px solid #ccc; /* Border color for right side */
-    border-bottom: 1px solid #ccc; /* Border color for bottom */
-}
-
-/* Toggling FAQ answer */
-.faq-item.active .faq-answer {
-    display: block; /* Show answer when active */
 }
 
 

@@ -14,10 +14,21 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var faqQuestions = document.querySelectorAll('.faq-question');
-        
+
             faqQuestions.forEach(function(question) {
                 question.addEventListener('click', function() {
-                    this.parentElement.classList.toggle('active');
+                    var answer = this.nextElementSibling;
+                    var isActive = this.classList.contains('active');
+
+                    // Toggle active class
+                    this.classList.toggle('active');
+
+                    // Set max-height for transition effect
+                    if (isActive) {
+                        answer.style.maxHeight = null;
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
                 });
             });
         });
@@ -76,38 +87,48 @@
     <div class="faq-header">
         <h2>Frequently Asked Questions</h2>
     </div>
+    <div class="faq-section">
+        <div class="faq-item">
+            <button class="faq-question">How often should I wash my genitals?</button>
+            <div class="faq-answer">
+                <p>It's generally recommended to wash your genital area daily, using mild soap and water. However, excessive washing or harsh soaps can disrupt the natural balance, so moderation is key.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Is it necessary to trim pubic hair for hygiene?
+            </button>
+            <div class="faq-answer">
+                <p>Trimming or shaving pubic hair is a personal preference. Keeping the area clean is more important than the hair itself. If you choose to trim, do it carefully to avoid skin irritation.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How can I prevent genital odor?
+            </button>
+            <div class="faq-answer">
+                <p>Regular washing, wearing breathable underwear, and changing into clean, dry clothes can help prevent genital odor. Avoiding tight-fitting clothing can also reduce sweat buildup.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How can I prevent jock itch and other fungal infections?
+            </button>
+            <div class="faq-answer">
+                <p>Keep the genital area clean and dry, especially after sweating. Wear breathable underwear, avoid tight clothing, and change out of wet clothes promptly.
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">When should I see a doctor about genital issues?
+            </button>
+            <div class="faq-answer">
+                <p>If you notice persistent itching, redness, swelling, unusual discharge, or any other changes in the genital area, it's essential to consult a healthcare professional for proper diagnosis and treatment.</p>
+            </div>
+        </div>
+        <!-- Add more FAQ items as needed -->
+    </div>    
     
-    <div class="faq-container">
-        <div class="faq-item">
-            <div class="faq-question">How often should I wash my genitals?</div>
-            <div class="faq-answer">It's generally recommended to wash your genital area daily, using mild soap and water. However, excessive washing or harsh soaps can disrupt the natural balance, so moderation is key.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">Is it necessary to trim pubic hair for hygiene?</div>
-            <div class="faq-answer">Trimming or shaving pubic hair is a personal preference. Keeping the area clean is more important than the hair itself. If you choose to trim, do it carefully to avoid skin irritation.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">How can I prevent genital odor?
-            </div>
-            <div class="faq-answer">Regular washing, wearing breathable underwear, and changing into clean, dry clothes can help prevent genital odor. Avoiding tight-fitting clothing can also reduce sweat buildup.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">How can I prevent jock itch and other fungal infections?
-            </div>
-            <div class="faq-answer">Keep the genital area clean and dry, especially after sweating. Wear breathable underwear, avoid tight clothing, and change out of wet clothes promptly.
-            </div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">When should I see a doctor about genital issues?
-            </div>
-            <div class="faq-answer">If you notice persistent itching, redness, swelling, unusual discharge, or any other changes in the genital area, it's essential to consult a healthcare professional for proper diagnosis and treatment.
-            </div>
-        </div>
-        <!-- Repeat for other FAQ items -->
-    </div>
 
     <footer class="site-footer">
         <div class="footer-content">
